@@ -1,0 +1,26 @@
+$bg-color:#a0e9d1;
+$bg:#eeaeca;
+$bg-gradient1:#eeafca;
+$bg-gradient2:#94bbe9;
+$bg-radial:#eeafca;
+$bg-redes:#3a3a3b;
+$oscuro:#292828;
+$nav-hover:#3948cf;
+$font-t:#433555;
+$font-p:#20212b;
+$bd-img-color:#141414;
+$img-hover:#5e4d4dc2;
+$claro:#ffffff;
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:$bg-color;
+    background:$bg;
+    background: radial-gradient(circle, $bg-gradient1 0%, $bg-gradient2 100%);
+}
+

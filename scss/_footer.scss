@@ -1,0 +1,32 @@
+.redes {
+    background: $bg-redes;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    a{
+        margin-top: 50px;
+        margin-left: 20px;
+        color: $claro;
+    }
+}
+
+/* aplica grid al footer */
+.footer {
+    grid-area:footer;
+    background-color: $bg-redes;
+    background-size: contain;
+    ol{
+        /* elementos horizontales */
+        display: flex;
+        justify-content: space-between;
+        /* separacion con borde inferior */
+        margin: 0px;
+        /* ancho del fondo */
+        padding: 50px;
+        h2{
+            color: $claro;
+            font-size: 1rem;
+            font-family: 'Share Tech Mono', monospace;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+.contenedor .main{
+    grid-area: main;
+}
+
+h1{
+    font-family: 'Share Tech Mono', monospace;
+    color: $font-t; /*color*/
+    font-size: 3rem; /*tamaño de letra*/
+    word-spacing: 5px; /*separacion entre palabras*/
+    text-align: justify;/*alineacion de texto*/
+    margin: 15px;
+    padding: 2.5rem;
+}
+
+h2{
+    margin: px;
+    font-family: 'Share Tech Mono', monospace;
+    color: $font-t; /*color*/
+    font-size: 2rem; /*tamaño de letra*/
+    word-spacing: 5px; /*separacion entre palabras*/
+    text-align: center;/*alineacion de texto*/
+}
+
+h3{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Share Tech Mono', monospace;
+    color: $font-t; /*color*/
+}
+
+p{
+    font-family: 'Share Tech Mono', monospace;
+    color: $font-t; /*color*/
+    font-size: 1rem; /*tamaño de letra*/
+    word-spacing: 2px; /*separacion entre palabras*/
+    padding: 10px;/*separacion entre parrafos*/
+    margin: 5px;
+    line-height: 1.3; /*separacion entre lineas*/
+}
+
+a{
+    font-family: 'Share Tech Mono', monospace;
+    text-decoration: none;
+    color: $font-t;
+    font-size: 1.1rem; /*tamaño de letra*/
+    word-spacing: 5px; /*separacion entre palabras*/
+    padding: 10px;/*separacion entre parrafos*/
+    margin: 5px;
+}
+
+.produc{
+    margin: 50px;
+    font-family: 'Share Tech Mono', monospace;
+    color: $font-t; /*color*/
+    font-size: 2rem; /*tamaño de letra*/
+    word-spacing: 5px; /*separacion entre palabras*/
+    text-align: center;/*alineacion de texto*/
+}
+
+/* aplicando GRIDS */
+.catalogos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2 1fr);
+    gap: 1px;
+    margin: 50px;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cards img{
+    width: 350px;
+    height: 350px;
+    border: 2px double $bd-img-color;
+    margin: 20px;
+    border-radius: 4px;
+}
+
+/* sombreado al posicionarse sobre la img */
+.cards img:hover{
+    /* sombreado detras */
+    box-shadow: 18px 21px 14px -6px $img-hover;
+    /* aumenta y adelanta la imagen */
+    width: 22rem;
+    /* tiempo de transicion */
+    transition: all 0.5s;
+}

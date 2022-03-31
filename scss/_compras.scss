@@ -1,0 +1,42 @@
+.compras{
+    margin-top: .1rem;
+    padding: 4rem;
+    img{
+        /* position: absolute; */
+        width: 10rem;
+        height: auto;
+        border: 1.5px double $bd-img-color;
+        margin: .5rem;
+        padding: .5rem;
+    }
+    ul{
+        list-style: none;
+        background-color: $claro;
+        display: flex;
+        justify-content: flex-end;
+    }
+    h3{
+        color: $oscuro;
+        padding: 5rem;
+        text-decoration: none;
+        display: block;
+        font-size: 1.3rem;
+    }
+    li{
+        color: $oscuro;
+        padding: 2rem;
+        text-decoration: none;
+        display: block;
+        font-size: 1.3rem;
+    }
+}
+
+.totalCompras{
+    margin-top: .1rem;
+    padding: 4rem;
+    ul{
+        list-style: none;
+        background-color: $claro;
+        justify-content: flex-end;
+    }
+}
