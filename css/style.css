@@ -197,12 +197,20 @@ a {
           justify-content: flex-end;
 }
 
+.compras h2 {
+  color: #292828;
+  padding: 5rem;
+  text-decoration: none;
+  display: block;
+  font-size: 4rem;
+}
+
 .compras h3 {
   color: #292828;
   padding: 5rem;
   text-decoration: none;
   display: block;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .compras li {
@@ -227,6 +235,10 @@ a {
 }
 
 .redes {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: redes;
   background: #3a3a3b;
   height: 100px;
   display: -webkit-box;
