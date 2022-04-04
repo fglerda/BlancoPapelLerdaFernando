@@ -75,7 +75,16 @@
         width: 56px;
         height: auto;
     }
+    h2{
+        margin: px;
+        font-family: 'Share Tech Mono', monospace;
+        color: $font-t; /*color*/
+        font-size: 1rem; /*tamaño de letra*/
+        word-spacing: 5px; /*separacion entre palabras*/
+        text-align: center;/*alineacion de texto*/
+    }
 }
+
 
 /* grande */
 @media (min-width: 992px) {

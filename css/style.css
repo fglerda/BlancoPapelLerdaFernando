@@ -202,7 +202,7 @@ a {
   padding: 5rem;
   text-decoration: none;
   display: block;
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 .compras h3 {
@@ -370,6 +370,19 @@ a {
   /* tamaño del elemento */
   width: 56px;
   height: auto;
+}
+
+.carro h2 {
+  margin: px;
+  font-family: 'Share Tech Mono', monospace;
+  color: #433555;
+  /*color*/
+  font-size: 1rem;
+  /*tamaño de letra*/
+  word-spacing: 5px;
+  /*separacion entre palabras*/
+  text-align: center;
+  /*alineacion de texto*/
 }
 
 /* grande */
