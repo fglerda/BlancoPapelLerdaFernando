@@ -87,10 +87,6 @@
 
 /* grande */
 @media (min-width: 992px) {
-    nav ul{
-        // position: fixed;
-        // margin: 0 auto;
-    }
     .catalogos{
         grid-template-columns: 1fr 1fr 1fr;
     }
