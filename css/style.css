@@ -15,23 +15,19 @@ body {
 .header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
+  -ms-grid-column-span: 5;
   grid-area: header;
+  background-color: #fefefe;
 }
 
 nav ul {
   list-style: none;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
 }
-
 nav ul a {
   color: #292828;
   margin: 2rem 2rem;
   font-size: 1.3rem;
 }
-
 nav ul a:hover {
   color: nav-hover;
   font-weight: bold;
@@ -39,21 +35,21 @@ nav ul a:hover {
 }
 
 .contenedor .main {
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
+  -ms-grid-column-span: 5;
   grid-area: main;
 }
 
 h1 {
-  font-family: 'Share Tech Mono', monospace;
+  font-family: "Share Tech Mono", monospace;
   color: #433555;
   /*color*/
   font-size: 3rem;
   /*tamaño de letra*/
   word-spacing: 5px;
   /*separacion entre palabras*/
-  text-align: justify;
+  text-align: center;
   /*alineacion de texto*/
   margin: 15px;
   padding: 2.5rem;
@@ -61,10 +57,10 @@ h1 {
 
 h2 {
   margin: px;
-  font-family: 'Share Tech Mono', monospace;
+  font-family: "Share Tech Mono", monospace;
   color: #433555;
   /*color*/
-  font-size: 2rem;
+  font-size: 1.5rem;
   /*tamaño de letra*/
   word-spacing: 5px;
   /*separacion entre palabras*/
@@ -78,13 +74,13 @@ h3 {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  font-family: 'Share Tech Mono', monospace;
+  font-family: "Share Tech Mono", monospace;
   color: #433555;
   /*color*/
 }
 
 p {
-  font-family: 'Share Tech Mono', monospace;
+  font-family: "Share Tech Mono", monospace;
   color: #433555;
   /*color*/
   font-size: 1rem;
@@ -99,7 +95,7 @@ p {
 }
 
 a {
-  font-family: 'Share Tech Mono', monospace;
+  font-family: "Share Tech Mono", monospace;
   text-decoration: none;
   color: #433555;
   font-size: 1.1rem;
@@ -111,29 +107,29 @@ a {
   margin: 5px;
 }
 
-.produc {
-  margin: 50px;
-  font-family: 'Share Tech Mono', monospace;
-  color: #433555;
-  /*color*/
-  font-size: 2rem;
-  /*tamaño de letra*/
-  word-spacing: 5px;
-  /*separacion entre palabras*/
-  text-align: center;
-  /*alineacion de texto*/
-}
-
 /* aplicando GRIDS */
+/* Mixin */
 .catalogos {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2 1fr);
+  -ms-grid-columns: 1fr 1px 1fr 1px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: ;
+  grid-template-rows: repeat(2 1fr);
   gap: 1px;
   margin: 50px;
+}
+.catalogos > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+.catalogos > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+.catalogos > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
 }
 
 .cards {
@@ -172,20 +168,59 @@ a {
   transition: all 0.5s;
 }
 
-.compras {
-  margin-top: .1rem;
-  padding: 4rem;
+.destacados {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+  gap: 20px;
+  padding: 20px;
+  grid-auto-flow: dense;
 }
 
+.car {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 4px;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.car:hover {
+  -webkit-filter: opacity(0.9);
+          filter: opacity(0.9);
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+}
+
+.compras {
+  margin-top: 0.1rem;
+  padding: 4rem;
+}
 .compras img {
   /* position: absolute; */
   width: 10rem;
   height: auto;
   border: 1.5px double #141414;
-  margin: .5rem;
-  padding: .5rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
 }
-
 .compras ul {
   list-style: none;
   background-color: #ffffff;
@@ -196,7 +231,6 @@ a {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-
 .compras h2 {
   color: #292828;
   padding: 5rem;
@@ -204,7 +238,6 @@ a {
   display: block;
   font-size: 2rem;
 }
-
 .compras h3 {
   color: #292828;
   padding: 5rem;
@@ -212,7 +245,6 @@ a {
   display: block;
   font-size: 1.5rem;
 }
-
 .compras li {
   color: #292828;
   padding: 2rem;
@@ -222,10 +254,9 @@ a {
 }
 
 .totalCompras {
-  margin-top: .1rem;
+  margin-top: 0.1rem;
   padding: 4rem;
 }
-
 .totalCompras ul {
   list-style: none;
   background-color: #ffffff;
@@ -235,9 +266,9 @@ a {
 }
 
 .redes {
-  -ms-grid-row: 3;
+  -ms-grid-row: 5;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
+  -ms-grid-column-span: 5;
   grid-area: redes;
   background: #3a3a3b;
   height: 100px;
@@ -248,7 +279,6 @@ a {
       -ms-flex-align: center;
           align-items: center;
 }
-
 .redes a {
   margin-top: 50px;
   margin-left: 20px;
@@ -257,16 +287,16 @@ a {
 
 /* aplica grid al footer */
 .footer {
-  -ms-grid-row: 4;
+  -ms-grid-row: 7;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
+  -ms-grid-column-span: 5;
   grid-area: footer;
   background-color: #3a3a3b;
   background-size: contain;
 }
-
-.footer ol {
+.footer ul {
   /* elementos horizontales */
+  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -278,11 +308,10 @@ a {
   /* ancho del fondo */
   padding: 50px;
 }
-
-.footer ol h2 {
+.footer ul li {
   color: #ffffff;
   font-size: 1rem;
-  font-family: 'Share Tech Mono', monospace;
+  font-family: "Share Tech Mono", monospace;
 }
 
 .contenedor {
@@ -290,11 +319,11 @@ a {
   display: -ms-grid;
   display: grid;
   grid-gap: 10px;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: (auto)[4];
-      grid-template-rows: repeat(4, auto);
-      grid-template-areas: "header header header" "main main main" "redes redes redes" "footer footer footer";
+  -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: auto 10px auto 10px auto 10px auto;
+  grid-template-rows: repeat(4, auto);
+      grid-template-areas: "header header header" "main main main" "redes redes redes" "footer footer footer";
 }
 
 .nuevosProductos {
@@ -306,14 +335,12 @@ a {
           justify-content: center;
   height: 400px;
 }
-
 .nuevosProductos img {
   width: 300px;
   height: auto;
   border: 2px double #141414;
   margin: 15px;
 }
-
 .nuevosProductos img:hover {
   /* sombreado detras */
   -webkit-box-shadow: 18px 21px 14px -6px #5e4d4dc2;
@@ -328,15 +355,12 @@ a {
 .sobreNosotros {
   background-size: cover;
 }
-
 .sobreNosotros h2 {
   margin: 80px;
 }
-
 .sobreNosotros h3 {
   margin: 20px;
 }
-
 .sobreNosotros p {
   padding: 50px;
   margin: 40px;
@@ -345,7 +369,7 @@ a {
 
 .contactanos {
   padding: 20px;
-  font-family: 'Share Tech Mono', monospace;
+  font-family: "Share Tech Mono", monospace;
   font-size: 1rem;
   /*tamaño de letra*/
   word-spacing: 2px;
@@ -365,16 +389,14 @@ a {
   /* ubicacion con respecto al eje horizontal */
   right: 1.5%;
 }
-
 .carro a img {
   /* tamaño del elemento */
   width: 56px;
   height: auto;
 }
-
 .carro h2 {
   margin: px;
-  font-family: 'Share Tech Mono', monospace;
+  font-family: "Share Tech Mono", monospace;
   color: #433555;
   /*color*/
   font-size: 1rem;
@@ -389,29 +411,76 @@ a {
 @media (min-width: 992px) {
   .catalogos {
     -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
+
   .contenedor {
-        grid-template-areas: "header header header" "main main main" "redes redes redes" "footer footer footer";
+        grid-template-areas: "header header header" "main main main" "redes redes redes" "footer footer footer";
+  }
+
+  .header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+  }
+
+  .contenedor .main {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+  }
+
+  .redes {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+  }
+
+  .footer {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
   }
 }
-
 /* mediano */
 @media (max-width: 991px) {
   .catalogos {
     -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
+
   .contenedor {
-        grid-template-areas: "header header header" "main main main" "redes redes redes" "footer footer footer";
+        grid-template-areas: "header header header" "main main main" "redes redes redes" "footer footer footer";
+  }
+
+  .header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+  }
+
+  .contenedor .main {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+  }
+
+  .redes {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+  }
+
+  .footer {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
   }
 }
-
 /* pequeño */
 @media (max-width: 576px) {
   .catalogos {
     -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
-/*# sourceMappingURL=style.css.map */

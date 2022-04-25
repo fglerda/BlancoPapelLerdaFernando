@@ -16,15 +16,16 @@
     grid-area:footer;
     background-color: $bg-redes;
     background-size: contain;
-    ol{
+    ul{
         /* elementos horizontales */
+        list-style: none;
         display: flex;
         justify-content: space-between;
         /* separacion con borde inferior */
         margin: 0px;
         /* ancho del fondo */
         padding: 50px;
-        h2{
+        li{
             color: $claro;
             font-size: 1rem;
             font-family: 'Share Tech Mono', monospace;
