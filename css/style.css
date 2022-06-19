@@ -111,24 +111,7 @@ a {
 .catalogos {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1px 1fr 1px 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: ;
-  grid-template-rows: repeat(2 1fr);
-  gap: 1px;
-  margin: 50px;
-}
-.catalogos > *:nth-child(1) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-}
-.catalogos > *:nth-child(2) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-}
-.catalogos > *:nth-child(3) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 5;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 }
 
 .cards {
@@ -149,7 +132,7 @@ a {
 }
 .cards img {
   width: 90%;
-  height: 350px;
+  height: auto;
   border: 2px double #141414;
   margin: 10px;
   border-radius: 4px;
@@ -159,7 +142,7 @@ a {
   -webkit-box-shadow: 18px 21px 14px -6px #5e4d4dc2;
           box-shadow: 18px 21px 14px -6px #5e4d4dc2;
   /* aumenta y adelanta la imagen */
-  width: 22rem;
+  width: 100%;
   /* tiempo de transicion */
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
